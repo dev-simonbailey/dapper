@@ -81,7 +81,7 @@ echo $yourVarName->checkColumns(array("id","name","age"));
 
 
 Feel free to build on top of the default methods, but be aware that re-running
-the mapper.php script will reset all alterations made - unless you modify mapper.php
+the dapper.php script will reset all alterations made - unless you modify dapper.php
 to include your new methods (recommended).
 
 You could, for example, add a method to the table class that allows you to
