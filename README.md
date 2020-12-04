@@ -7,15 +7,23 @@ accessed by devs working on code - protects the MySQL database from potential
 erroneous manipulation.
 
 The default Properties are:
+
   $table    <string> to hold the table name
+
   $columns  <array> to hold the column names
+
   $check    <boolean> used by the checkColumns method
+
   $messages <array> to hold error messages from checkColumns method
+
   $schema   <array<array>...> to hold the schema data for the table
 
 The default methods are:
+
   getColumns() Returns an array containing the column names
+
   getSchema()  Returns an array of the schema data
+
   checkColumns()  accepts an array of column names as input, checks if they
                   are valid, if they are will return true, otherwise will
                   return a string of the columns that are not valid.
@@ -27,13 +35,21 @@ section, then either run in browser or via the command line (php dapper.php)
 All the classes are created in a dir called classes/tables, as shown below.
 
 <your project>
+
     |-classes
+
         |-tables
+
             |-<table classes>
+
     |-dapper
+
         |-dapper.php
+
         |-classes
+
             |-dapper.DB.class.php
+
     |-index.php
 
 The structure of Dapper is the dapper dir, which contains a script (dapper.php)
@@ -43,16 +59,25 @@ that connects to the MySQL database specified.
 
 Usage example:
 echo "Insert Table Name ==> ";
+
 $yourVarName = new Tables\Tablename\tablename;
+
 //This will echo out all the columns in the table
+
 foreach ($yourVarName->getColumns() as $column) {
+
  echo $column.", ";
+
 }
+
 // This will var_dump the schema data.
+
 var_dump($yourVarName->getSchema());
 
 // This will check the column names are valid and return any that are not
+
 echo $yourVarName->checkColumns(array("id","name","age"));
+
 
 Feel free to build on top of the default methods, but be aware that re-running
 the mapper.php script will reset all alterations made - unless you modify mapper.php
