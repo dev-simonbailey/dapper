@@ -1,6 +1,6 @@
 # dapper
 
-Dapper takes a MySQL database as an input and then retrieves all the tables,
+dapper takes a MySQL database as an input and then retrieves all the tables,
 gets the columns and schemas for those tables and creates classes for them
 in classes->tables. It was created so that the MySQL database doesn't need to be
 accessed by devs working on code - protects the MySQL database from potential
