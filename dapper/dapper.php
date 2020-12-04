@@ -57,7 +57,7 @@
  * echo $yourVarName->checkColumns(array("id","name","age"));
  *
  * Feel free to build on top of the default methods, but be aware that re-running
- * the mapper.php script will reset all alterations made - unless you modify mapper.php
+ * dapper.php will reset all alterations made - unless you modify dapper.php
  * to include your new methods (recommended).
  *
  * You could, for example, add a method to the table class that allows you to
@@ -103,7 +103,7 @@ $encoding = 'latin1';
 
 
 // NOTE: Nothing needs modifying below this line, but feel free to adapt it to your needs.
-require(__DIR__."/classes/mapper.DB.class.php");
+require(__DIR__."/classes/dapper.DB.class.php");
 $DB = new MeekroDB($host, $user, $password, $dbName, $port, $encoding);
 echo "MAPPING STARTED\n";
 $db_tables = $DB->tableList();
