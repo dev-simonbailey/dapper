@@ -19,8 +19,9 @@
  *  getColumns() Returns an array containing the column names
  *  getSchema()  Returns an array of the schema data
  *  checkColumns()  accepts an array of column names as input, checks if they
- *                  are valid, if they are will return true, otherwise will
- *                  return a string of the columns that are not valid.
+ *                  are valid, if they are will return a string containing the
+ *                  column names passed in, otherwise will return a string of
+ *                  the columns that are not valid.
  *
  * To use, navigate to the dapper folder and open the dapper.php file,
  * fill in the credentials of the database you want to conenct to, in the top
