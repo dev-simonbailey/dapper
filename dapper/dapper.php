@@ -34,7 +34,7 @@ foreach ($db_tables as $table) {
   $classString.= "\t".'declare(strict_types = 1);'."\n\n";
   $classString.= "\t".'namespace Tables\\'.ucwords($table).';'."\n\n";
   $classString.= "\t".'class '.$table.' implements '.$table.'Interface {'."\n\n";
-  $classString.= "\t\t".'private $table = "follow";'."\n\n";
+  $classString.= "\t\t".'private $table = "'.$table.'";'."\n\n";
   $columns_array = '';
   foreach ($columns as $column) {
     $columns_array.= '"'.$column.'",';
